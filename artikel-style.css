@@ -31,7 +31,7 @@ header{
 
 .artikel{
     margin: auto;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
     font-weight: 500;
 }
 
@@ -48,6 +48,7 @@ header{
     background-color: #B67F71;
     border-radius: 15px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .related-article{
@@ -61,6 +62,10 @@ header{
     width: fit-content;
     background-color: #F9E2C1;
     border-radius: 15px;
+    position : absolute; 
+    top:-50px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 h1{
