@@ -3,12 +3,15 @@ let style = document.createElement('style')
 style.innerHTML = `
     
     .navbar {
-        padding : 0.5rem 24px;
-        background-color: #1e1b24;
-        color : white;
+        padding : 1rem 5rem;
+        // background-color: #1e1b24;
         display: flex;
         justify-content: left;
         align-items: center;
+    }
+
+    .push {
+        margin-left : auto;
     }
 
     .menu-item{
@@ -20,13 +23,14 @@ style.innerHTML = `
     .menu-item a {
         text-decoration: none;
         color : white;
-        font-size : 1.2rem;
+        font-size : 1rem;
         font-family : 'Montserrat', sans-serif;
     }
 
     
     .logo-item a { 
         font-size : 2rem;
+        font-weight : 500;
     }
 
     .footer {
@@ -38,12 +42,13 @@ style.innerHTML = `
 
     .inner-footer {
         border-bottom : 2px solid white;
-        padding : 1rem;
-        margin : 1rem;
+        padding : 1rem 0rem;
+        margin : 1rem 5rem;
+        padding-bottom : 2rem;
     }
 
     .footer-item {
-        padding : 0.5rem;
+        padding : 0.5rem 0rem;
     }
     .footer-item ul li {
         text-decoration : none;
@@ -55,9 +60,10 @@ let ref = document.querySelector('script');
 ref.parentNode.insertBefore(style, ref);
 
 // Function to add navbar into 
-let getNavbar = (navItems = [], logo = null) => {
+let getNavbar = (navItems = [], logo = null, background = 'None', align = 'left') => {
     let navbar = document.createElement('navbar');
     navbar.className = 'navbar'
+    navbar.style.background = background
     let template = (navItem) => {
         return `
         <div class="menu-item">
@@ -67,11 +73,21 @@ let getNavbar = (navItems = [], logo = null) => {
     }
     
     // Using foreach so the navbar will be flexible no matter how many menu will be added. 
-    navItems.forEach((item) => {
-        navbar.innerHTML += template(item)
+    navItems.forEach((item, i) => {
+        if ( i === 0 && align === 'left') {
+            navbar.innerHTML = `
+                <div class="menu-item push">
+                    <a href="${item.link}"> ${item.title} </a>
+                </div>
+            `
+        } else {
+            navbar.innerHTML += template(item)
+        }
+        
     })
 
     if ( logo ){
+
         let placeholder = `
             <div class="menu-item logo-item">
                 <a href="${logo.link}"> ${logo.title} </a>
@@ -87,7 +103,7 @@ let getNavbar = (navItems = [], logo = null) => {
 
 
 
-let getFooter = ( footerItems = [], columnNum = 3, rowNum = 3, ) => {
+let getFooter = ( footerItems = [], columnNum = 3, rowNum = 0, ) => {
     let footer = document.createElement('footer');
     let innerFooter = document.createElement('div')
     footer.appendChild(innerFooter)
@@ -108,6 +124,7 @@ let getFooter = ( footerItems = [], columnNum = 3, rowNum = 3, ) => {
     Proin tortor sem, vulputate vitae sem ut, porttitor sollicitudin ligula. 
     Ut quis vulputate sem.`
     text.style.wordSpacing = "5px"
+    text.style.gridColumn = "1 / span 2";
 
     innerFooter.appendChild(text)
     
@@ -148,49 +165,8 @@ let getFooter = ( footerItems = [], columnNum = 3, rowNum = 3, ) => {
     return footer
 }
 
-// *** THIS SECTION MIGHT BE BETTER TO BE PUT INTO A SEPERATE FILE***// 
 
-// Menu list for navbar
-let navbarItems = [
-    {
-        title : "Home",
-        link : "#"
-    },{
-        title : "About",
-        link : "#"
-    },{
-        title : "Agent",
-        link : "#"
-    },
-] 
-
-// Item list for footer
-let footerItems = [
-    [{
-        title : "Tentang Kami",
-        link : "#"
-    },{
-        title : "Artikel",
-        link : "#"
-    },{
-        title : "Daur Ulang",
-        link : "#"
-    }],
-    {
-        title : "Email",
-        link : "#"
-    },
-]
-
-// Function to append an element created by other functions to the document
-let constructor = (el, target) => {
-    // element is the element needs to be apended, target is the element in which the element want to be appended
-    target.appendChild(el)
-    return true
-}
-
-constructor(getNavbar(navbarItems, {title : "Sampahpedia", link : "#"}), document.querySelector('.navbar-placeholder'));
-constructor(getFooter(footerItems,3,3), document.querySelector('.footer-placeholder'))
+export { getFooter, getNavbar }
 
 
 
