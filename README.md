@@ -1,5 +1,6 @@
 # sampahpedia
 Milestone Project for SPARTA
+<<<<<<< HEAD
 
 How to use this repository:
 
@@ -7,3 +8,5 @@ How to use this repository:
 
 
 -Untuk content creator, upload artikel dalam bentuk txt ke branch content-creator
+=======
+>>>>>>> web-developer
