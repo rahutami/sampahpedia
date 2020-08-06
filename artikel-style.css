@@ -1,0 +1,68 @@
+/* 
+#357843 dark green
+#C6D2AC light green
+#F9E2C1 light brown
+#B67F71 dark brown
+*/
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 5% 0;
+    color: #B67F71;
+    background-color: #C6D2AC ;
+    text-align: center;
+    margin: 0;
+}
+
+.image{
+    width: 300px;
+    height: 200px;
+    background-color: rgb(238, 238, 238);
+    margin: 20px auto;
+    text-align: center;
+    padding: auto;
+}
+
+.artikel{
+    margin: auto;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+.img-square{
+    margin: auto;
+    width: 250px;
+    height: 150px;
+    background-color: rgb(238, 238, 238);
+}
+.related-post{
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    background-color: #B67F71;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.related-article{
+    padding: 5px;
+}
+
+.related-post-title{
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    width: fit-content;
+    background-color: #F9E2C1;
+    border-radius: 15px;
+}
+
+h1{
+    font-size: 72px;
+}
