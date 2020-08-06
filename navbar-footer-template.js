@@ -87,7 +87,7 @@ let getNavbar = (navItems = [], logo = null) => {
 
 
 
-
+// Function to add footer into the current HTML page 
 let getFooter = ( footerItems = [], columnNum = 3, rowNum = 3, ) => {
     let footer = document.createElement('footer');
     let innerFooter = document.createElement('div')
@@ -189,7 +189,8 @@ let constructor = (el, target) => {
     target.appendChild(el)
     return true
 }
-
+// Add div.navbar-placeholder in the HTML file to add havbar
+// Add div.footer-placeholder in the HTML file to add footer
 constructor(getNavbar(navbarItems, {title : "Sampahpedia", link : "#"}), document.querySelector('.navbar-placeholder'));
 constructor(getFooter(footerItems,3,3), document.querySelector('.footer-placeholder'))
 
