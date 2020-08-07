@@ -74,6 +74,27 @@ let infoText = {
     
 }
 
+let dataAkun = [
+    {
+        id : "354ADF",
+        username : "Eru",
+        password : "Eru123"
+
+    },
+    {
+        id : "354ADF",
+        username : "Ds",
+        password : "Ds123"
+
+    },
+    {
+        id : "354ADF",
+        username : "EruDs",
+        password : "EruDs123"
+
+    }
+]
+
 let dummy = () => {
     let paragraph = document.createElement('p')
     paragraph.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque aliquam orci ex, a ullamcorper nisi suscipit sit amet. Cras a ante justo. Nunc accumsan dapibus nisi, vel fermentum purus imperdiet ac. `
@@ -82,4 +103,4 @@ let dummy = () => {
 
 
 
-export { navbarItems, footerItems, jumbotronText, infoText, dummy }
+export { navbarItems, footerItems, jumbotronText, infoText, dummy, dataAkun }

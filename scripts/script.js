@@ -18,6 +18,6 @@ constructor(getJumbotron(infoText.heading, infoText.subtext, "./assets/img-1.png
 constructor(createSection(6,6, dummy()), document.querySelector('.section'))
 constructor(createSection(6,6, dummy()), document.querySelector('.section'))
 
-
+export { constructor }
 
 

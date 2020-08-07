@@ -67,19 +67,20 @@ let createForm = () => {
 
     let form = document.createElement('form')
     form.className = 'login-form'
+    form.method = 'POST'
     form.innerHTML = `
         <div class="title">Login</div>
         <div class="form-wrap">
             <div class="form-input">
                 <label for="uname"> Username </label>
-                <input id="login-uname" type="text" name="uname" placeholder="Enter Username">
+                <input id="login-uname" type="text" name="uname" placeholder="Enter Username" autocomplete="off">
             </div>
             <div class="form-input">
                 <label for="pwd"> Password</label>
                 <input id="login-pwd" type="password" name="pwd" placeholder="Enter Password">
             </div>
             <div class="form-input">
-                <button type="submit" class="login-submit">Login</button>
+                <button type="submit" class="login-submit" >Login</button>
             </div>
 
         </div>

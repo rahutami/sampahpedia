@@ -1,10 +1,7 @@
 import { createForm } from './form-template.js'
-
-function getLoginInfo(){
-    console.log("TEST")
-}
-
-
+import { dataAkun } from './data.js'
+import { createDropdown } from './dropdown-template.js'
+import { constructor } from './script.js'
 
 let loginButton = document.querySelector('.menu-item.loginButton')
 loginButton.addEventListener("click", (e) => {
@@ -72,33 +69,54 @@ loginButton.addEventListener("click", (e) => {
     document.querySelector('.login-submit').addEventListener("click", e => {
         e.preventDefault();
 
+        let loggedIn = false
+
         let uNameField = document.querySelector("#login-uname");
         let passField = document.querySelector("#login-pwd");
 
-
-        let username = uNameField.value;
-        let password = passField.value;
-        if ( username === "" || password === ""){
-            let warning = "This Field can't be Empty";
-            let textEl = document.createElement('p');
-            textEl.className = "warning-text"
-            textEl.innerText = warning
-            if ( username === ""){
-                uNameField.classList.add("required");
-                uNameField.parentNode.insertAdjacentElement("afterend", textEl)
-            } 
-
-            if ( password === ""){
-                passField.classList.add("required");
-                passField.parentNode.insertAdjacentElement("afterend", textEl)
+        while ( !loggedIn ) {
+            let username = uNameField.value;
+            let password = passField.value;
+            if ( username === "" || password === ""){
+                let warning = "This Field can't be Empty";
+                let textEl = document.createElement('p');
+                textEl.className = "warning-text"
+                textEl.innerText = warning
+                if ( !document.querySelector('.warning-text')){
+                    if ( username === ""){
+                        uNameField.classList.add("required");
+                        uNameField.parentNode.insertAdjacentElement("afterend", textEl)
+                    } 
+    
+                    if ( password === ""){
+                        passField.classList.add("required");
+                        passField.parentNode.insertAdjacentElement("afterend", textEl)
+                    }
+                }
+                
+                return false;
             }
-            
 
-            return false;
+            dataAkun.forEach( data => {
+                if ( data.username === username && data.password === password ){
+                    loggedIn = true;
+                }
+            })
+            
+            if ( loggedIn ){
+                let target = document.querySelector(".loginButton")
+                document.querySelector('.navbar').removeChild(target)
+                
+                target = document.querySelector('.navbar')
+                constructor(createDropdown( password, ["Profil","Settings", "Keluar"]), target);
+                
+                target = document.querySelector('.modal-container')
+                document.querySelector('#app').removeChild(target)
+            }
         }
 
-        let target = document.querySelector('.modal-container')
-        document.querySelector('#app').removeChild(target)
+        
+
     })
 
 
@@ -111,5 +129,3 @@ document.addEventListener("click", e => {
         document.querySelector('#app').removeChild(target)
     }
 })
-
-console.log(document.querySelector(".login-submit"))
