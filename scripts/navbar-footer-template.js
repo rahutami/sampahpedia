@@ -1,9 +1,12 @@
+import { createLogin } from "./login.js"
+
+
 // Styling for elements created on this script 
 let style = document.createElement('style')
 style.innerHTML = `
     
     .navbar {
-        padding : 1rem 5rem;
+        padding : 0 5rem;
         // background-color: #1e1b24;
         display: flex;
         justify-content: left;
@@ -17,6 +20,7 @@ style.innerHTML = `
     .menu-item{
         padding: 1rem;
         color: white;
+        height : 100%;
     }
     
 
@@ -96,6 +100,8 @@ let getNavbar = (navItems = [], logo = null, background = 'None', align = 'left'
         
         navbar.innerHTML = placeholder + navbar.innerHTML
     }
+
+    navbar.appendChild(createLogin())
 
     return navbar // Returns a Navbar Element which need to be appended
 }
