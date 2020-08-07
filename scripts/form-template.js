@@ -72,11 +72,11 @@ let createForm = () => {
         <div class="form-wrap">
             <div class="form-input">
                 <label for="uname"> Username </label>
-                <input type="text" name="uname" placeholder="Enter Username">
+                <input id="login-uname" type="text" name="uname" placeholder="Enter Username">
             </div>
             <div class="form-input">
                 <label for="pwd"> Password</label>
-                <input type="text" name="pwd" placeholder="Enter Password">
+                <input id="login-pwd" type="password" name="pwd" placeholder="Enter Password">
             </div>
             <div class="form-input">
                 <button type="submit" class="login-submit">Login</button>
@@ -86,9 +86,9 @@ let createForm = () => {
     `
     return form
 
-
-
 }
+
+
 
 
 

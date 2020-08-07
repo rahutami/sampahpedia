@@ -30,10 +30,20 @@ loginButton.addEventListener("click", (e) => {
         background : #B67F71;
         border-radius : 10px;
         max-width : 800px;
-        max-height : 86vh;
+        max-height : 94vh;
         overflow : auto;
 
     }
+
+    .warning-text {
+
+    }
+
+    .required {
+        border-color : red !important;
+        transition : 0.3s all ease-out;
+    }
+
     
     `
 
@@ -59,7 +69,41 @@ loginButton.addEventListener("click", (e) => {
     let ref = document.querySelector('script');
     ref.parentNode.insertBefore(style, ref);
 
+    document.querySelector('.login-submit').addEventListener("click", e => {
+        e.preventDefault();
+
+        let uNameField = document.querySelector("#login-uname");
+        let passField = document.querySelector("#login-pwd");
+
+
+        let username = uNameField.value;
+        let password = passField.value;
+        if ( username === "" || password === ""){
+            let warning = "This Field can't be Empty";
+            let textEl = document.createElement('p');
+            textEl.className = "warning-text"
+            textEl.innerText = warning
+            if ( username === ""){
+                uNameField.classList.add("required");
+                uNameField.parentNode.insertAdjacentElement("afterend", textEl)
+            } 
+
+            if ( password === ""){
+                passField.classList.add("required");
+                passField.parentNode.insertAdjacentElement("afterend", textEl)
+            }
+            
+
+            return false;
+        }
+
+        let target = document.querySelector('.modal-container')
+        document.querySelector('#app').removeChild(target)
+    })
+
+
 })
+
 
 document.addEventListener("click", e => {
     let target = document.querySelector('.modal-container')
@@ -68,6 +112,4 @@ document.addEventListener("click", e => {
     }
 })
 
-// document.querySelector('.login-submit').addEventListener("click", e => {
-//     console.log(e.target.parentNode);
-// })
+console.log(document.querySelector(".login-submit"))
