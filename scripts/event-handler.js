@@ -108,7 +108,7 @@ loginButton.addEventListener("click", (e) => {
                 document.querySelector('.navbar').removeChild(target)
                 
                 target = document.querySelector('.navbar')
-                constructor(createDropdown( password, ["Profil","Settings", "Keluar"]), target);
+                constructor(createDropdown( username, ["Profil","Settings", "Keluar"]), target);
                 
                 target = document.querySelector('.modal-container')
                 document.querySelector('#app').removeChild(target)
