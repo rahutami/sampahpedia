@@ -19,6 +19,8 @@ body {
     top: 370px;
     left: 75px;
     z-index: 2;
+    opacity: 1;
+    transition: .3s ease-in;
 }
 
 /* Carousel */
@@ -37,11 +39,13 @@ body {
 .information_track {
     height: fit-content;
     position: relative;
+    transition: transform .5s ease-in;
 }
 
 .information_track_container {
     position: relative;
-    height: 100%;
+    height: fit-content;
+    overflow: hidden;
 }
 
 .information_slide {
@@ -49,10 +53,11 @@ body {
     position: absolute;
     height: 100%;
     top: 0;
-    width: 100%;
+    bottom: 0;
     opacity: 0;
+    transition: .6s ease-in;
+    width: 100%;
     margin: 0;
-    transition: ease-in .4s;
 }
 
 .information_button {
@@ -67,6 +72,7 @@ body {
     transform: translateY(-50%);
     z-index: 2;
     cursor: pointer;
+    outline: none;
 }
 
 .information_button:active {
@@ -96,6 +102,7 @@ body {
     right: 13%;
     bottom: 15%;
     z-index: 2;
+    transition: .3s ease-in;
 }
 
 .information_indicator {
@@ -114,6 +121,10 @@ body {
     position: relative;
     opacity: 1;
     z-index: 1;
+}
+
+.section_hidden {
+    opacity: 0;
 }
 
 .current_indicator,
