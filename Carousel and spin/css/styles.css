@@ -60,6 +60,8 @@ body {
     padding: 10px;
     border-radius: 100%;
     border: none;
+    opacity: .6;
+    transition: ease-in .3s;
     background-color: whitesmoke;
     top: 50%;
     transform: translateY(-50%);
@@ -69,6 +71,11 @@ body {
 
 .information_button:active {
     border: none;
+}
+
+.information_button:hover,
+.information_button:focus {
+    opacity: 1;
 }
 
 .information_button img {
@@ -100,6 +107,7 @@ body {
     margin: 5px;
     border-radius: 5px;
     transition: ease-in-out .4s;
+    cursor: pointer;
 }
 
 .current_info {
@@ -108,7 +116,8 @@ body {
     z-index: 1;
 }
 
-.current_indicator {
+.current_indicator,
+.information_indicator:hover {
     opacity: .6;
 }
 
