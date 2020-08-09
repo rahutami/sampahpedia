@@ -5,10 +5,16 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, "public")))
+
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+} else {
+    app.use(express.static(path.join(__dirname, "public")))
+}
 
 app.get("*", (req, res)=> {
-    res.sendFile(path.join(__dirname, 'public','artikel-page.html'))
+    res.sendFile(path.join(__dirname, 'public','main.html'))
 })
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
