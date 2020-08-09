@@ -1,0 +1,39 @@
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box; 
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size : 1rem;
+}
+  
+#app {
+  background-color: #8EBAB3;
+  min-height : 100vh;
+  overflow-x : hidden;
+  background : url('../assets/bg2.jpg');
+  background-size : contain;
+
+}
+
+.main-content {
+  min-height : 300px;
+}
+
+.main-content:first-child {
+  border-radius: 1rem 1rem 0 0 ;
+}
+
+.stop-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 
+
+#app-ov {
+  background : linear-gradient(to right, rgba(30,30,30, 80%), rgba(30,30,30, 60%),rgba(30,30,30, 40%), rgba(30,30,30, 0%),rgba(30,30,30, 40%))
+}
+
+
+a {
+  text-decoration: none;
+  color : inherit
+}
