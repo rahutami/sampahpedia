@@ -1,4 +1,4 @@
-<<<<<<< HEAD:scripts/carousel.js
+
 // Carousel
 
 const track = document.querySelector('.information_track');
@@ -197,5 +197,4 @@ $(document).ready(function() {
             $('#image-gallery').removeClass('cS-hidden');
         }  
     });
->>>>>>> 7155fe7726617affa502fe6ab7c0bc4db76d2f65:Carousel and spin/js/script.js
 });
