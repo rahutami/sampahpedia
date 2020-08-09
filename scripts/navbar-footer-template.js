@@ -2,8 +2,7 @@ import { createLogin } from "./login.js"
 
 
 // Styling for elements created on this script 
-let style = document.createElement('style')
-style.innerHTML = `
+let style =  `
     
     .navbar {
         padding : 0 5rem;
@@ -21,6 +20,9 @@ style.innerHTML = `
         padding: 1rem;
         color: white;
         height : 100%;
+        min-height : 80px;
+        display : grid;
+        align-items : center;
     }
     
 
@@ -60,8 +62,8 @@ style.innerHTML = `
         margin-bottom : 15px;
     }
 `
-let ref = document.querySelector('script');
-ref.parentNode.insertBefore(style, ref);
+let ref = document.querySelector('#MAIN_STYLE');
+ref.innerHTML += style
 
 // Function to add navbar into 
 let getNavbar = (navItems = [], logo = null, background = 'None', align = 'left') => {
@@ -173,31 +175,3 @@ let getFooter = ( footerItems = [], columnNum = 3, rowNum = 0, ) => {
 
 
 export { getFooter, getNavbar }
-
-
-
-//****************IGNORE THIS ************//
-// let getFooter = ( footerItems, columnNum, rowNum) => {
-//     let footer = document.createElement('footer');
-//     footer.className = 'footer'
-//     footer.style.display = 'grid';
-//     footer.style.gridTemplateColumns = `repeat(${columnNum}, auto)`
-//     footer.style.gridTemplateRows = `repeat(${rowNum}, auto)`
-    
-//     let template = (item) => {
-//         return `
-//         <div class="footer-item">
-//             ${item.title}
-//         </div>
-//         `
-//     }
-
-//     footerItems.forEach((item) => {
-//         footer.innerHTML += template(item)
-//     })
-
-
-
-//     console.log(footer)
-//     return footer
-// }

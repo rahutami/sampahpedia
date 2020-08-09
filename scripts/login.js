@@ -1,11 +1,11 @@
 let style = document.createElement('style')
 style.innerHTML = `
-    .menu-item.loginButton:hover {
+    .menu-item:not(.logo-item):hover {
         background-color : rgba(0,0,0,0.6);
         border-bottom : 4px solid rgba(123,151,324,0.6);
         cursor : pointer;
     }
-    .menu-item.loginButton:active {
+    .menu-item:not(.logo-item):active {
         background-color : rgba(123,151,324,0.6);
         cursor : pointer;
     }

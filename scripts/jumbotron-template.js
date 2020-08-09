@@ -1,6 +1,5 @@
 // Styling for elements created on this script 
-let style = document.createElement('style')
-style.innerHTML = `
+let style = `
     .jumbotron {
         display : grid;
         grid-template-columns : repeat(2, 1fr);
@@ -28,7 +27,11 @@ style.innerHTML = `
     }
 `
 
-let getJumbotron = function ( heading, subtext, img = null, position ="left", jumbotronStyle = { className : null, style : "" }){
+let ref = document.querySelector('#MAIN_STYLE');
+ref.innerHTML += style
+
+
+let createJumbotron = function ( heading, subtext, img = null, position ="left", jumbotronStyle = { className : null, style : "" }){
     let jumbotron = document.createElement('div');
     jumbotron.className = 'jumbotron'
 
@@ -66,13 +69,12 @@ let getJumbotron = function ( heading, subtext, img = null, position ="left", ju
     if ( jumbotronStyle.className ){
         
         jumbotron.classList.add(jumbotronStyle.className)
-        style.innerHTML += jumbotronStyle.style
+        ref.innerHTML += jumbotronStyle.style
     }
     return jumbotron
 }
 
 
-let ref = document.querySelector('script');
-ref.parentNode.insertBefore(style, ref);
 
-export { getJumbotron }
+
+export { createJumbotron }

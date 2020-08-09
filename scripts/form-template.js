@@ -23,6 +23,11 @@ let createForm = () => {
             justify-items : center;
         }
 
+        .form-input {
+            display : grid;
+            justify-items : center;
+        }
+
         .form-input label {
             margin: 0rem 0rem 2rem 0rem ;
             font-size : 1.2rem;
@@ -44,8 +49,7 @@ let createForm = () => {
             outline : none;
         }
 
-        .form-input button[type="submit"]{
-            margin-top : 20px;
+        .form-input button{
             padding : 10px 20px;
             font-size : 1rem;
             border : none;
@@ -59,6 +63,10 @@ let createForm = () => {
         .form-input button[type="submit"]:focus{
             outline : none;
             // background : linear-gradient(to left, #00C853, #B2FF59, #5b54d2);
+        }
+
+        .signupLink:hover{
+            color : #357843;
         }
     `
 
@@ -79,10 +87,11 @@ let createForm = () => {
                 <label for="pwd"> Password</label>
                 <input id="login-pwd" type="password" name="pwd" placeholder="Enter Password">
             </div>
+            <h4 class="mini"> Don't have an account? Sign-up <a href="#" class="signupLink"> here</a></h4>
             <div class="form-input">
-                <button type="submit" class="login-submit" >Login</button>
+                <button class="login-submit" onclick="loginSubmit()">Login</button>
             </div>
-
+            
         </div>
     `
     return form

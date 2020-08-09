@@ -10,7 +10,7 @@
   background-color: #8EBAB3;
   min-height : 100vh;
   overflow-x : hidden;
-  background : url('./assets/bg2.jpg');
+  background : url('../assets/bg2.jpg');
   background-size : contain;
 
 }
@@ -19,7 +19,7 @@
   min-height : 300px;
 }
 
-.main-content div:first-child {
+.main-content:first-child {
   border-radius: 1rem 1rem 0 0 ;
 }
 
@@ -30,4 +30,10 @@
 
 #app-ov {
   background : linear-gradient(to right, rgba(30,30,30, 80%), rgba(30,30,30, 60%),rgba(30,30,30, 40%), rgba(30,30,30, 0%),rgba(30,30,30, 40%))
+}
+
+
+a {
+  text-decoration: none;
+  color : inherit
 }

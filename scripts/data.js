@@ -3,7 +3,7 @@
 let navbarItems = [
     {
         title : "Artikel",
-        link : "#"
+        link : "artikel-page.html"
     },{
         title : "Agen",
         link : "#"
@@ -45,9 +45,7 @@ let jumbotronText = {
     style : {
         className : "jumbotronText",
         style : `
-            .jumbotronText .jumbotron-text-wrap {
-                
-            }
+
         `
     }
     
@@ -95,12 +93,35 @@ let dataAkun = [
     }
 ]
 
+let galleryItems = [
+    {
+        img : "../assets/img-2.png",
+        text : "Cari Tahu",
+    },
+    {
+        img : "../assets/img-3.png",
+        text : "Mulai",
+    },
+    {
+        img : "../assets/img-4.png",
+        text : "Selengkapnya",
+    }
+]
+
 let dummy = () => {
     let paragraph = document.createElement('p')
     paragraph.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque aliquam orci ex, a ullamcorper nisi suscipit sit amet. Cras a ante justo. Nunc accumsan dapibus nisi, vel fermentum purus imperdiet ac. `
     return [paragraph]
 }   
 
+let imgs = [
+    '../assets/bali.jpg',
+    '../assets/bali.jpg',
+    '../assets/bali.jpg',
+    '../assets/bali.jpg',
+    '../assets/bali.jpg'
+]
 
 
-export { navbarItems, footerItems, jumbotronText, infoText, dummy, dataAkun }
+
+export { navbarItems, footerItems, jumbotronText, infoText, dummy, dataAkun, galleryItems, imgs }

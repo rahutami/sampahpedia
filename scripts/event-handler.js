@@ -1,7 +1,7 @@
 import { createForm } from './form-template.js'
 import { dataAkun } from './data.js'
 import { createDropdown } from './dropdown-template.js'
-import { constructor } from './script.js'
+import { constructor } from './constructor.js'
 
 let loginButton = document.querySelector('.menu-item.loginButton')
 loginButton.addEventListener("click", (e) => {
@@ -27,7 +27,7 @@ loginButton.addEventListener("click", (e) => {
         background : #B67F71;
         border-radius : 10px;
         max-width : 800px;
-        max-height : 94vh;
+        max-height : 100vh;
         overflow : auto;
 
     }
@@ -61,65 +61,9 @@ loginButton.addEventListener("click", (e) => {
 
     app.insertBefore(modalContainer, app.firstChild)
 
-
-
     let ref = document.querySelector('script');
     ref.parentNode.insertBefore(style, ref);
-
-    document.querySelector('.login-submit').addEventListener("click", e => {
-        e.preventDefault();
-
-        let loggedIn = false
-
-        let uNameField = document.querySelector("#login-uname");
-        let passField = document.querySelector("#login-pwd");
-
-        while ( !loggedIn ) {
-            let username = uNameField.value;
-            let password = passField.value;
-            if ( username === "" || password === ""){
-                let warning = "This Field can't be Empty";
-                let textEl = document.createElement('p');
-                textEl.className = "warning-text"
-                textEl.innerText = warning
-                if ( !document.querySelector('.warning-text')){
-                    if ( username === ""){
-                        uNameField.classList.add("required");
-                        uNameField.parentNode.insertAdjacentElement("afterend", textEl)
-                    } 
-    
-                    if ( password === ""){
-                        passField.classList.add("required");
-                        passField.parentNode.insertAdjacentElement("afterend", textEl)
-                    }
-                }
-                
-                return false;
-            }
-
-            dataAkun.forEach( data => {
-                if ( data.username === username && data.password === password ){
-                    loggedIn = true;
-                }
-            })
-            
-            if ( loggedIn ){
-                let target = document.querySelector(".loginButton")
-                document.querySelector('.navbar').removeChild(target)
-                
-                target = document.querySelector('.navbar')
-                constructor(createDropdown( username, ["Profil","Settings", "Keluar"]), target);
-                
-                target = document.querySelector('.modal-container')
-                document.querySelector('#app').removeChild(target)
-            }
-        }
-
-        
-
-    })
-
-
+    document.querySelector('.login-submit').onclick = loginSubmit;
 })
 
 
@@ -129,3 +73,64 @@ document.addEventListener("click", e => {
         document.querySelector('#app').removeChild(target)
     }
 })
+
+function loginSubmit(e){
+    e.preventDefault();
+
+    let loggedIn = false
+
+    let uNameField = document.querySelector("#login-uname");
+    let passField = document.querySelector("#login-pwd");
+
+    
+    Array(uNameField, passField).forEach( item => {
+        let textEl = document.createElement('p');
+        textEl.className = "warning-text"
+        textEl.innerText = "This Field can't be Empty"
+        let el = item.parentElement.querySelector('.warning-text') 
+        if ( !el && item.value === ""){
+            item.classList.add('required');
+            item.parentElement.appendChild(textEl);
+        } else if ( el && item.value != "" ){
+            item.classList.remove('required')
+            item.parentElement.removeChild(el)
+        }
+    })
+
+    dataAkun.forEach( data => {
+        if ( data.username === uNameField.value && data.password === passField.value ){
+            loggedIn = true;
+            return true;
+        }
+    })
+
+    if ( ! loggedIn ){
+        let el = e.target.parentElement.parentElement
+    }
+    
+    if ( loggedIn ){
+        let data = [
+            { 
+                name:"Profil", 
+                link : "#" 
+            },
+            { 
+                name:"Settings",
+                link:"#" 
+            },
+            { 
+                name:"Keluar", 
+                link:"#" 
+            }
+        ]
+        let target = document.querySelector(".loginButton")
+        document.querySelector('.navbar').removeChild(target)
+        
+        target = document.querySelector('.navbar')
+        constructor(createDropdown( { name: uNameField.value, link:"#"}, data), target);
+        
+        target = document.querySelector('.modal-container')
+        document.querySelector('#app').removeChild(target)
+    }
+
+}
