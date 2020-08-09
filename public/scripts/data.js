@@ -95,15 +95,15 @@ let dataAkun = [
 
 let galleryItems = [
     {
-        img : "../assets/img-2.png",
+        img : "../assets/img-2.jpg",
         text : "Cari Tahu",
     },
     {
-        img : "../assets/img-3.png",
+        img : "../assets/img-2.jpg",
         text : "Mulai",
     },
     {
-        img : "../assets/img-4.png",
+        img : "../assets/img-2.jpg",
         text : "Selengkapnya",
     }
 ]
