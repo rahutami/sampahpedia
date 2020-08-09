@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get("*", (req, res)=> {
-    res.sendFile(path.join(__dirname, 'public','main.html'))
+    res.sendFile(path.join(__dirname, '/public/main.html'))
 })
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
