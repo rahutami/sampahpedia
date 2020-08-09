@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "Milestone Project for SPARTA\r <<<<<<< HEAD",
   "main": "main.html",
-  "build": "cd client && npm run build",
-  "install": "cd client && npm install",
   "dependencies": {
     "express": "^4.17.1"
   },
