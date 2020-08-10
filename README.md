@@ -1,6 +1,9 @@
-# sampahpedia
+# Sampahpedia
+Kelompok 5 Milestone 'Ecologia'
+-
+
 Milestone Project for SPARTA
-=
+
 
 Pembagian tugas:
 -
