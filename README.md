@@ -45,4 +45,4 @@ Content Creator:
 
 Penjelasan Solusi
 -
-Masalah yang ingin kelompok kami selesaikan adalah mengenai sampah di Indonesia yang sangat banyak. Solusi dari kami adalah membuat website untuk mengedukasi masyarakat tentang pentingnya mendaur ulang sampah. Sampai saat ini, di website kami terdapat tiga artikel yang membahas tentang: Pentingnya mendaur ulang, Pemilahan sampah, dan Cara mendaur ulang. Selain itu, di website kami juga terdapat kontak-kontak organisasi lingkungan yang bertujuan agar pendatang website tahu tempat untuk mencari tahu lebih lanjut mengenai daur ulang.
+Masalah yang ingin kelompok kami selesaikan adalah mengenai sampah di Indonesia yang sangat banyak. Solusi dari kami adalah membuat website untuk mengedukasi masyarakat tentang pentingnya mendaur ulang sampah. Sampai saat ini, di website kami terdapat tiga artikel yang membahas tentang pentingnya mendaur ulang, pemilahan sampah, dan cara mendaur ulang. Selain itu, di website kami juga terdapat kontak-kontak organisasi lingkungan yang bertujuan agar pendatang website tahu tempat untuk mencari tahu lebih lanjut mengenai daur ulang.
