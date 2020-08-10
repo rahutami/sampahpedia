@@ -1,8 +1,9 @@
 # sampahpedia
 Milestone Project for SPARTA
-<<<<<<< HEAD
+=
 
 Pembagian tugas:
+=
 Web Developer:
 Mahameru Ds (16519177)
 Denilsen Axel (16519116)
@@ -24,9 +25,8 @@ Ibnu Hafizh (16519060)
 Dwianditya Hanif (16519058)
 
 How to use this repository:
+=
 
 -Upload file ke branch yang sesuai sama role kalian
 
 -Untuk content creator, upload artikel dalam bentuk txt ke branch content-creator
-
->>>>>>> web-developer
