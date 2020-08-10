@@ -39,7 +39,7 @@ let style = `
         padding : 20px;
         display : flex;
         flex-direction : column;
-        justify-content : space-evenly;
+        justify-content : space-around;
         align-items : center;
         grid-gap : 1.4rem;
         color : #B67F71;
