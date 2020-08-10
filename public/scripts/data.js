@@ -7,7 +7,7 @@ let navbarItems = [
     // },
     {
         title : "Agen",
-        link : "#"
+        link : "#INFORMATION"
     },{
         title : "Kontak",
         link : "#"
