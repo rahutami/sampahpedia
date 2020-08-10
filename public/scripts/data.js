@@ -31,7 +31,7 @@ let footerItems = [
         link : "#"
     }],
     {
-        title : "ecologia-support@sampahpedia.com",
+        title : "contact : support@sampahpedia.com",
         link : "#"
     },
 ]
