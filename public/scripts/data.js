@@ -1,10 +1,11 @@
 
 // Menu list for navbar
 let navbarItems = [
+    // {
+    //     title : "Artikel",
+    //     link : "artikel-page.html"
+    // },
     {
-        title : "Artikel",
-        link : "artikel-page.html"
-    },{
         title : "Agen",
         link : "#"
     },{
