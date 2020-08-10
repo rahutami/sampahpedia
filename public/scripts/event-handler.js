@@ -15,8 +15,6 @@ let loginButton = document.querySelector('.menu-item.loginButton')
 document.querySelector("navbar").addEventListener("click", createModal )
 
 function createModal(e) {
-    
-    console.log(e.target)
     if (e.target != loginButton ){
         return false;
     }
@@ -38,12 +36,13 @@ function createModal(e) {
     .modal {
         color : white;
         padding : 80px 200px;
-        position : relative;
+        position : relative !important;
         background : #B67F71;
         border-radius : 10px;
         max-width : 800px;
         max-height : 100vh;
         overflow : auto;
+        display : block !important;
 
     }
 
@@ -144,14 +143,13 @@ function loginSubmit(e){
 }
 
 
-document.querySelector(".section").addEventListener("click", getArticle);
+document.querySelector("#Article_Gallery").addEventListener("click", getArticle);
 
 function getArticle(e){
-    if ( e.target.classname != "gallery-link-artikel"){
+    if ( e.target.className != "gallery-link-artikel"){
         return false ;
     }
     let id = e.target.id;
-    console.log(e.target.id)
 
     let data = null;
     galleryItems.forEach( item => {

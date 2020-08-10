@@ -36,7 +36,8 @@ header{
 
 .artikel_content{
     font-weight: 500;
-    padding : 2rem 10rem;
+    padding : 10rem;
+    padding-top : 3rem;
     text-align : justify;
 }
 

@@ -10,4 +10,4 @@ image.style.width = "100%";
 app.querySelector(".image").appendChild(image)
 app.querySelector(".artikel_content").innerText = item.longText
 
-// sessionStorage.clear()
+localStorage.clear()
