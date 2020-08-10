@@ -7,6 +7,9 @@ import { createArticleG } from "./a-gallery-template.js"
 // Function to append an element created by other functions to the document
 let constructor = (el, target) => {
     // element is the element needs to be apended, target is the element in which the element want to be appended
+    if ( ! target ) {
+        return false
+    }
     target.appendChild(el)
     return true
 }
