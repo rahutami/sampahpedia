@@ -12,7 +12,7 @@ document.addEventListener("click", e => {
 })
 
 let loginButton = document.querySelector('.menu-item.loginButton')
-document.addEventListener("click", createModal )
+document.querySelector("navbar").addEventListener("click", createModal )
 
 function createModal(e) {
     
@@ -144,7 +144,7 @@ function loginSubmit(e){
 }
 
 
-document.addEventListener("click", getArticle);
+document.querySelector(".section").addEventListener("click", getArticle);
 
 function getArticle(e){
     if ( e.target.classname != "gallery-link-artikel"){
@@ -159,7 +159,6 @@ function getArticle(e){
             data = item
         }
     })
-    console.log(data)
 
     localStorage.setItem('Data', JSON.stringify(data));
 
