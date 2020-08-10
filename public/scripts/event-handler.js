@@ -160,7 +160,7 @@ function getArticle(e){
 
     localStorage.setItem('Data', JSON.stringify(data));
 
-    window.location.replace("artikel-page")
+    window.location.replace("artikel-page.html")
 
     
 
