@@ -1,4 +1,3 @@
-
 // Carousel
 
 const track = document.querySelector('.information_track');

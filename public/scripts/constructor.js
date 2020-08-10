@@ -27,7 +27,7 @@ header.innerText = 'Apa yang bisa kita lakukan?'
 let items = new Array()
 items.push(header)
 galleryItems.forEach( item => {
-    items.push(createArticleG(item.img, item.text))
+    items.push(createArticleG(item))
 })
 
 constructor(createSection(0,3,"Article_Gallery", items), document.querySelector('.section'))

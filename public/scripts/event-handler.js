@@ -3,8 +3,23 @@ import { dataAkun } from './data.js'
 import { createDropdown } from './dropdown-template.js'
 import { constructor } from './constructor.js'
 
+
+document.addEventListener("click", e => {
+    let target = document.querySelector('.modal-container')
+    if ( e.target == target){
+        document.querySelector('#app').removeChild(target)
+    }
+})
+
 let loginButton = document.querySelector('.menu-item.loginButton')
-loginButton.addEventListener("click", (e) => {
+document.addEventListener("click", createModal )
+
+function createModal(e) {
+    
+    console.log(e.target)
+    if (e.target != loginButton ){
+        return false;
+    }
     let style = document.createElement('style')
     style.innerHTML = `
     .modal-container {
@@ -64,15 +79,8 @@ loginButton.addEventListener("click", (e) => {
     let ref = document.querySelector('script');
     ref.parentNode.insertBefore(style, ref);
     document.querySelector('.login-submit').onclick = loginSubmit;
-})
+}
 
-
-document.addEventListener("click", e => {
-    let target = document.querySelector('.modal-container')
-    if ( e.target == target){
-        document.querySelector('#app').removeChild(target)
-    }
-})
 
 function loginSubmit(e){
     e.preventDefault();

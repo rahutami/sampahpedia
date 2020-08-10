@@ -93,18 +93,31 @@ let dataAkun = [
     }
 ]
 
+// let fs = require('fs');
+// let data = fs.readFileSync('content1.txt', 'utf8');
+
 let galleryItems = [
     {
-        img : "../assets/img-2.jpg",
-        text : "Cari Tahu",
+        img : "../assets/content-1.jpg",
+        title : "Kenapa Daur Ulang?",
+        text : `
+        Sebagai negara dengan jumlah penduduk terbesar ke-4 di Dunia, Indonesia memiliki suatu masalah yang tidak kalah besar. 
+        Dengan jumlah 267 juta penduduk per Juli 2020, Indonesia merupakan negara penghasil sampah plastic terbesar ke-2 di dunia.
+        `
     },
     {
-        img : "../assets/img-2.jpg",
-        text : "Mulai",
+        img : "../assets/content-2.jpg",
+        title : "Pemilahan Sampah",
+        text : `Ketika mendengar kata sampah, apa sih yang kalian pikirkan ? Sebenarnya sampah itu juga bisa memberi dampak positif loh, semuanya kembali kepada individu masing-masing. 
+        `,
     },
     {
-        img : "../assets/img-2.jpg",
-        text : "Selengkapnya",
+        img : "../assets/content-3.jpg",
+        title : "Pengolahan Sampah",
+        text : 
+        `
+        Dengan pengelolaan sampah rumah tangga yang benar, kita dapat membantu untuk menekan dampak negatif sampah terhadap lingkungan. 
+        Bagaimana sih cara pengelolaan sampah yang benar di rumah? Simak cara melakukannya di bawah ini.`,
     }
 ]
 
