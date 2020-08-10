@@ -19,7 +19,6 @@ let style =  `
     .menu-item{
         padding: 1rem;
         color: white;
-        height : 100%;
         min-height : 80px;
         display : grid;
         align-items : center;
@@ -35,8 +34,16 @@ let style =  `
 
     
     .logo-item a { 
-        font-size : 2rem;
-        font-weight : 500;
+        height : inherit;
+    }
+
+    .logo-item {
+        height : 180px;
+    }
+    
+    .logo-item img {
+        max-width : 100%;
+        max-height : 100%;
     }
 
     .footer {
@@ -73,7 +80,7 @@ let getNavbar = (navItems = [], logo = null, background = 'None', align = 'left'
     let template = (navItem) => {
         return `
         <div class="menu-item">
-        <a href="${navItem.link}"> ${navItem.title} </a>
+            <a href="${navItem.link}"> ${navItem.title} </a>
         </div>
         `
     }
@@ -96,7 +103,7 @@ let getNavbar = (navItems = [], logo = null, background = 'None', align = 'left'
 
         let placeholder = `
             <div class="menu-item logo-item">
-                <a href="${logo.link}"> ${logo.title} </a>
+                <a href="${logo.link}"> <img src=${logo.img}> </img> </a>
             </div> 
         `
         

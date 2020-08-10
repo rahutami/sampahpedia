@@ -15,10 +15,10 @@ let constructor = (el, target) => {
 }
 
 
-constructor(getNavbar(navbarItems, {title : "SampahPedia", link : "./main.html"}, "rgba(0,0,0,0.2)"), document.querySelector('.navbar-placeholder'));
+constructor(getNavbar(navbarItems, {img : "../assets/logo-putih.png", link : "./main"}, ""), document.querySelector('.navbar-placeholder'));
 constructor(getFooter(footerItems,6), document.querySelector('.footer-placeholder'))
 constructor(createJumbotron(jumbotronText.heading, jumbotronText.subtext,"", "left", jumbotronText.style), document.querySelector('.headerSection'))
-constructor(createJumbotron(infoText.heading, infoText.subtext, "./assets/img-1.png", "right", infoText.style), document.querySelector('.infoSection'))
+constructor(createJumbotron(infoText.heading, infoText.subtext, "./assets/tong.png", "right", infoText.style), document.querySelector('.infoSection'))
 
 let header = document.createElement('div')
 header.className = 'gallery-header'

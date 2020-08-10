@@ -181,6 +181,7 @@ body {
     margin-top: 20px;
 }
 
+
 /* Section kanan */
 
 .information_agent {
@@ -191,6 +192,16 @@ body {
     width: 40%;
     display: flex;
     flex-direction: column;
+}
+
+.information_agent h3, 
+.information_agent p, 
+.information_agent a {
+    margin-top : 2rem;
+}
+
+.agent_name {
+    font-size : 2rem;
 }
 
 .agent_other_info {

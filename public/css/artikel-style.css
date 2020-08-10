@@ -14,10 +14,15 @@ body{
 }
 header{
     padding: 5% 0;
+    padding-top : 0;
     color: #B67F71;
     background-color: #C6D2AC ;
     text-align: center;
     margin: 0;
+}
+
+.custom {
+    padding: 5% 0;
 }
 
 .image{
