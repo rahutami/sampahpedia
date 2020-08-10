@@ -1,5 +1,5 @@
 import { createForm } from './form-template.js'
-import { dataAkun } from './data.js'
+import { dataAkun, galleryItems } from './data.js'
 import { createDropdown } from './dropdown-template.js'
 import { constructor } from './constructor.js'
 
@@ -140,5 +140,32 @@ function loginSubmit(e){
         target = document.querySelector('.modal-container')
         document.querySelector('#app').removeChild(target)
     }
+
+}
+
+
+document.addEventListener("click", getArticle);
+
+function getArticle(e){
+    if ( e.target.classname == "gallery-link-artikel"){
+        return false ;
+    }
+    let id = e.target.id;
+    console.log(e.target.id)
+
+    let data = null;
+    galleryItems.forEach( item => {
+        if ( item.id == id ) {
+            data = item
+        }
+    })
+    console.log(data)
+
+    localStorage.setItem('Data', JSON.stringify(data));
+
+    window.location.replace("artikel-page.html")
+
+    
+
 
 }

@@ -13,17 +13,18 @@ let style = `
         font-weight : 700;
     }
    
-   .gallery-text-artikel {
+   .gallery-link-artikel {
         background-color: #B67F71;
-        font-size : 1.5rem;
-        padding : 1rem 2rem;
         width : 80%;
         color: white;
         text-align : center;
         border-radius : 10px;
+        padding : 1rem 2rem;
+        cursor : pointer;
+        
+        font-size : 1.5rem;
         font-weight : 600;
    }
-   
    .gallery-img {
        
         max-height : 300px;
@@ -33,6 +34,13 @@ let style = `
    
    .gallery-item img {
         width : 100%;
+    }
+
+    .gallery-item {
+        display : flex;
+        flex-direction : column;
+        justify-content : space-around;
+        align-items : center;
     }
 
    .gallery-text-wrap {
@@ -59,12 +67,13 @@ let createArticleG = (item) => {
         </div>
         <div class="gallery-text-wrap">
             <h3 class="gallery-judul-artikel"> ${item.title} </h3>
-            <p style="text-align: center; height: 100px"> ${item.text} </p>
-            <p class="gallery-text-artikel"> Selengkapnya </p>
+            <p style="text-align: center; max-height: 150px"> ${item.text} </p>
+            <p id="${item.id}" class="gallery-link-artikel" > Selengkapnya </p></a>
         </div>
     
     `
     return template
 }
+
 
 export { createArticleG }

@@ -20,7 +20,7 @@ body {
     left: 75px;
     z-index: 2;
     opacity: 1;
-    transition: .3s ease-in;
+    /* transition: .3s ease-in; */
 }
 
 /* Carousel */
