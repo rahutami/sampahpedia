@@ -147,7 +147,7 @@ function loginSubmit(e){
 document.addEventListener("click", getArticle);
 
 function getArticle(e){
-    if ( e.target.classname == "gallery-link-artikel"){
+    if ( e.target.classname != "gallery-link-artikel"){
         return false ;
     }
     let id = e.target.id;
